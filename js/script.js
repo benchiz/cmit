@@ -1,9 +1,11 @@
 'use strict'
 
 const breakpoint = window.matchMedia('(min-width:769px)');
+const breakpointTablet = window.matchMedia('(min-width:1101px)');
 
 let mySwiper;
 let mySecondSwiper;
+let gradSwiper;
 
 const breakpointChecker = function () {
     if (breakpoint.matches === true) {
@@ -50,3 +52,52 @@ const breakpointSecondChecker = function () {
 
 breakpoint.addListener(breakpointSecondChecker);
 breakpointSecondChecker();
+
+
+const graduateSwiper = function () {
+    gradSwiper = new Swiper('.swiper.graduate__swiper', {
+        direction: 'horizontal',
+        loop: "true",
+        slidesPerView: 1,
+        spaceBetween: 20,
+        slidesPerGroup: 1,
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 20
+            },
+            769: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+                spaceBetween: 20
+            }
+        },
+        pagination: {
+            el: '.swiper-pagination.graduate__swiper-pagination',
+        }
+    });
+};
+
+const breakpointGradChecker = function () {
+    if (breakpoint.matches && breakpointTablet.matches === true) {
+        if (gradSwiper !== undefined) gradSwiper.destroy(true, true);
+        return;
+    } else if (breakpoint.matches && breakpointTablet.matches === false) {
+        return graduateSwiper();
+    }
+};
+
+breakpointTablet.addListener(breakpointGradTabletChecker);
+breakpointGradTabletChecker();
+
+// const breakpointGradChecker = function () {
+//     if (breakpoint.matches === true) {
+//         if (gradSwiper !== undefined) gradSwiper.destroy(true, true);
+//         return;
+//     } else if (breakpoint.matches === false) {
+//         return graduateSwiper();
+//     }
+// };
+
+// breakpoint.addListener(breakpointGradTabletChecker);
+// breakpointGradTabletChecker();

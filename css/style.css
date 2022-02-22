@@ -366,10 +366,6 @@ a:hover {
     background-size: cover;
 }
 
-.course-info__block {
-    padding-top: 133px;
-}
-
 .course-info__title {
     font-family: inherit;
     font-weight: 700;
@@ -377,10 +373,26 @@ a:hover {
     line-height: 36px;
     text-align: center;
     color: #fff;
+    padding-top: 130px;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.program-course .swiper-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 26px 24px;
+}
+
+.course-info__swiper .swiper-wrapper {
+    gap: 45px;
 }
 
 .course-info__wrapper {
-    margin-top: 100px;
+    margin-top: 47px;
 }
 
 .course-info__wrapper-block {
@@ -392,21 +404,33 @@ a:hover {
 .course-info__person {
     position: absolute;
     bottom: 0;
-    z-index: 1;
+    z-index: 2;
     width: auto;
-    max-height: 358px;
-    left: 50%;
+    max-height: 536px;
+    left: 43%;
     transform: translateX(-50%);
 }
 
 .course-info__text {
-    top: auto;
-    bottom: 0;
+    top: 10%;
+    bottom: auto;
     width: 100%;
-    left: 50%;
-    max-width: 68%;
+    left: 80%;
+    max-width: 37%;
     transform: translateX(-50%);
     padding: 31px 15px;
+}
+
+.course-info__wrapper-block:nth-child(2) .course-info__text {
+    left: 85%;
+}
+
+.course-info__wrapper-block:nth-child(3) .course-info__text {
+    left: 56%;
+}
+
+.course-info__wrapper-block:nth-child(3) .course-info__person {
+    left: 30%;
 }
 
 .course-info__wrapper-block p {
@@ -419,18 +443,7 @@ a:hover {
     color: #fff;
     background: rgba(60, 17, 164, 0.8);
     border-radius: 10px;
-    z-index: 2;
-}
-
-.swiper-pagination {
-    display: none;
-}
-
-.swiper-wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 26px 24px;
+    z-index: 1;
 }
 
 .program-course {
@@ -444,7 +457,7 @@ a:hover {
     line-height: 36px;
     text-align: center;
     color: #3C11A4;
-    padding-top: 155px;
+    padding-top: 148px;
     margin-bottom: 41px;
 }
 
@@ -516,7 +529,7 @@ a:hover {
     font-family: inherit;
     font-weight: bold;
     font-size: 70px;
-    line-height: 36px;
+    line-height: 76px;
     text-align: center;
     color: #3C11A4;
     padding-top: 151px;
@@ -526,7 +539,7 @@ a:hover {
 .learning__block {
     display: flex;
     gap: 24px;
-    padding-bottom: 179px;
+    padding-bottom: 239px;
 }
 
 .learning__block__item {
@@ -538,6 +551,51 @@ a:hover {
     background: #fff;
     border-radius: 10px;
     padding: 71px 28px;
+    width: 25%;
+}
+
+.graduate {
+    background-image: url('../img/graduate-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.graduate__swiper {
+    padding-bottom: 164px;
+    padding-top: 20px;
+}
+
+.graduate__title {
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 76px;
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 157px;
+    margin-bottom: 24px;
+}
+
+.graduate .swiper-wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.graduate-item__text {
+    font-family: inherit;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFFFFF;
+    background: rgba(60, 17, 164, 0.85);
+    border-radius: 10px;
+    padding: 87px 23px 45px 31px;
+    margin-right: 20px;
+    height: 231px;
+}
+
+.swiper-pagination {
+    display: none;
 }
 
 @media (min-width: 0px) and (max-width: 1350px) {
@@ -566,8 +624,33 @@ a:hover {
         font-size: 14px;
     }
 
+    .course-info__text {
+        max-width: 48%;
+    }
+
+    .course-info__wrapper-block:nth-child(2) .course-info__text {
+        left: 75%;
+    }
+
+    .course-info__wrapper-block:nth-child(3) .course-info__text {
+        left: 46%;
+        max-width: 39%;
+    }
+
+    .course-info__wrapper-block:nth-child(2) .course-info__person {
+        left: 25%;
+    }
+
+    .course-info__wrapper-block:nth-child(3) .course-info__person {
+        left: 14%;
+    }
+
     .program-course__item {
         min-height: 644px;
+    }
+
+    .graduate-item__text {
+        font-size: 20px;
     }
 }
 
@@ -719,10 +802,25 @@ a:hover {
         left: 140px;
     }
 
+    .course-info__wrapper-block:nth-child(2) .course-info__text {
+        left: 45%;
+    }
+
+    .course-info__wrapper-block:nth-child(3) .course-info__text {
+        max-width: 80%;
+    }
+
+    .course-info__wrapper-block:nth-child(2) .course-info__person {
+        left: 40%;
+    }
+
+    .course-info__wrapper-block:nth-child(3) .course-info__person {
+        left: 50%;
+    }
+
     .course-info__text {
         top: auto;
         bottom: -177px;
-        left: 300px;
         max-width: 80%;
         left: 133px;
     }
@@ -730,9 +828,12 @@ a:hover {
     .course-info__person {
         bottom: -177px;
         left: 136px;
+        max-height: 358px;
     }
 
     .course-info__title {
+        margin-top: 70px;
+        margin-bottom: 9px;
         font-size: 65px;
     }
 
@@ -849,6 +950,7 @@ a:hover {
         background: #FFFFFF;
         border-radius: 10px;
         padding: 46px 40px;
+        width: auto;
     }
 
     .course-info__swiper .swiper-wrapper {
@@ -860,6 +962,42 @@ a:hover {
         height: 550px;
     }
 
+    .graduate-item__text {
+        font-size: 18px;
+        line-height: 28px;
+        margin-right: 14px;
+    }
+
+    .graduate .swiper-wrapper {
+        display: flex;
+    }
+
+    .program-course .swiper-pagination {
+        display: none;
+    }
+
+    .swiper-pagination {
+        display: block;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding-top: 40px;
+        padding-bottom: 65px;
+        text-align: center;
+    }
+
+    .swiper-pagination-bullet {
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+        border-radius: 50%;
+        background: #3C11A4;
+        margin-right: 15px;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #F92985;
+    }
 }
 
 @media (min-width: 0px) and (max-width: 768px) {
@@ -1049,7 +1187,8 @@ a:hover {
         line-height: 42px;
         text-align: center;
         color: #fff;
-        margin-top: 70px;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
     .course-info__wrapper {
@@ -1067,6 +1206,14 @@ a:hover {
         left: 50%;
     }
 
+    .course-info__wrapper-block:nth-child(2) .course-info__person {
+        left: 50%;
+    }
+
+    .course-info__wrapper-block:nth-child(3) .course-info__person {
+        left: 50%;
+    }
+
     .course-info__text {
         top: auto;
         bottom: 0;
@@ -1076,10 +1223,6 @@ a:hover {
 
     .course-info__swiper {
         height: auto;
-    }
-
-    .swiper {
-        background: linear-gradient(235.38deg, #3C11A4 31.75%, rgba(61, 18, 165, 0) 78.98%), linear-gradient(0deg, #0513D2, #0513D2);
     }
 
     .program-course {
@@ -1182,29 +1325,6 @@ a:hover {
         gap: 0;
     }
 
-    .swiper-pagination {
-        display: block;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        padding-top: 40px;
-        padding-bottom: 65px;
-        text-align: center;
-    }
-
-    .swiper-pagination-bullet {
-        width: 15px;
-        height: 15px;
-        display: inline-block;
-        border-radius: 50%;
-        background: #3C11A4;
-        margin-right: 15px;
-    }
-
-    .swiper-pagination-bullet-active {
-        background: #F92985;
-    }
-
     .learning {
         background: #E3EFFC;
     }
@@ -1250,5 +1370,15 @@ a:hover {
         padding-top: 29px;
         padding-bottom: 29px;
         margin-bottom: 0;
+    }
+
+    .program-course .swiper-pagination {
+        display: block;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding-top: 40px;
+        padding-bottom: 65px;
+        text-align: center;
     }
 }
