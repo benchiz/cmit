@@ -58,18 +58,16 @@ const graduateSwiper = function () {
     gradSwiper = new Swiper('.swiper.graduate__swiper', {
         direction: 'horizontal',
         loop: "true",
-        slidesPerView: 1,
         spaceBetween: 20,
         slidesPerGroup: 1,
         breakpoints: {
             320: {
                 slidesPerView: 1,
-                spaceBetween: 20
+                slidesPerGroup: 1
             },
             769: {
                 slidesPerView: 2,
-                slidesPerGroup: 2,
-                spaceBetween: 20
+                slidesPerGroup: 2
             }
         },
         pagination: {
@@ -79,25 +77,13 @@ const graduateSwiper = function () {
 };
 
 const breakpointGradChecker = function () {
-    if (breakpoint.matches && breakpointTablet.matches === true) {
+    if (breakpointTablet.matches === true) {
         if (gradSwiper !== undefined) gradSwiper.destroy(true, true);
         return;
-    } else if (breakpoint.matches && breakpointTablet.matches === false) {
+    } else if (breakpointTablet.matches === false) {
         return graduateSwiper();
     }
 };
 
-breakpointTablet.addListener(breakpointGradTabletChecker);
-breakpointGradTabletChecker();
-
-// const breakpointGradChecker = function () {
-//     if (breakpoint.matches === true) {
-//         if (gradSwiper !== undefined) gradSwiper.destroy(true, true);
-//         return;
-//     } else if (breakpoint.matches === false) {
-//         return graduateSwiper();
-//     }
-// };
-
-// breakpoint.addListener(breakpointGradTabletChecker);
-// breakpointGradTabletChecker();
+breakpointTablet.addListener(breakpointGradChecker);
+breakpointGradChecker();
