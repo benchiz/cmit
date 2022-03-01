@@ -1,5 +1,6 @@
 'use strict'
 
+// $(document).ready(function () {
 const breakpoint = window.matchMedia('(min-width:769px)');
 const breakpointTablet = window.matchMedia('(min-width:1101px)');
 
@@ -53,7 +54,6 @@ const breakpointSecondChecker = function () {
 breakpoint.addListener(breakpointSecondChecker);
 breakpointSecondChecker();
 
-
 const graduateSwiper = function () {
     gradSwiper = new Swiper('.swiper.graduate__swiper', {
         direction: 'horizontal',
@@ -87,3 +87,74 @@ const breakpointGradChecker = function () {
 
 breakpointTablet.addListener(breakpointGradChecker);
 breakpointGradChecker();
+
+let btn = document.querySelector('button');
+
+function validateEmail(mail) {
+    const regEx = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+    return regEx.test(String(mail).toLowerCase());
+}
+
+function validatePhone(phone) {
+    const regExPhone = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+    return regExPhone.test(phone);
+}
+
+function checkName() {
+    let userName = document.querySelector('._name');
+    if (userName.value < 3) {
+        userName.style.borderColor = 'red';
+        return false;
+    } else {
+        userName.style.borderColor = 'green';
+        return true;
+    }
+}
+
+function checkMail() {
+    let mail = document.querySelector('._mail');
+    if (validateEmail(mail)) {
+        mail.style.borderColor = 'green';
+        return true;
+    } else {
+        mail.style.borderColor = 'red';
+    }
+    return false;
+}
+
+function checkPhone() {
+    let phone = document.querySelector('._tel');
+    if (validatePhone(phone)) {
+        phone.style.borderColor = 'green';
+        return true;
+    } else {
+        phone.style.borderColor = 'red';
+    }
+    return false;
+}
+
+function checkAgreement() {
+    let agreement = document.querySelector('._agreement');
+    console.log(agreement);
+    if (!agreement.checked) {
+        agreement.closest('.main_form__confidentiality').querySelector('label a').style.border = '1px solid red';
+        return false;
+    } else {
+        agreement.closest('.main_form__confidentiality').querySelector('label a').style.border = '1px solid green';
+        return true;
+    }
+}
+
+btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    checkName();
+    checkMail();
+    checkPhone();
+    checkAgreement();
+    if (checkName() && checkMail() && checkPhone() && checkAgreement()) {
+        console.log('Данные отправлены.');
+    } else {
+        console.log('Заполните все данные.');
+    }
+});
+// });

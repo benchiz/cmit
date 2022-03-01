@@ -240,6 +240,10 @@ button {
     padding-left: 10px;
 }
 
+.main_form__confidentiality._error label::after {
+    box-shadow: 0 0 15px red;
+}
+
 .main_form__confidentiality label {
     font-family: inherit;
     font-size: 11px;
@@ -303,6 +307,13 @@ a:hover {
     cursor: pointer;
     width: 100%;
     white-space: nowrap;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.btn.active {
+    opacity: 1;
+    pointer-events: all;
 }
 
 .btn:hover {
@@ -972,6 +983,7 @@ a:hover {
 .footer__second-copyright {
     display: none;
 }
+
 
 @media (min-width: 0px) and (max-width: 1350px) {
     .header__info-title {
@@ -2149,8 +2161,8 @@ a:hover {
     }
 
     .footer-course {
-        font-size: 34px;
-        line-height: 44px;
+        font-size: 32px;
+        line-height: 34px;
         padding-bottom: 25px;
     }
 
@@ -2164,7 +2176,7 @@ a:hover {
 
     .footer-text__item {
         font-size: 26px;
-        line-height: 26px;
+        line-height: 25px;
         margin-bottom: 10px;
     }
 
@@ -2178,12 +2190,12 @@ a:hover {
     }
 
     .footer__form {
-        padding: 35px 20px 50px 20px;
+        padding: 35px 20px 42px 20px;
     }
 
     .footer__form span {
-        font-size: 18px;
-        line-height: 26px;
+        font-size: 17px;
+        line-height: 28px;
     }
 
     .footer_form__container {
@@ -2197,7 +2209,11 @@ a:hover {
     .footer-form__element input {
         font-size: 16px;
         line-height: 36px;
-        padding: 15px 20px 10px 20px;
+        padding: 15px 20px 6px 20px;
+    }
+
+    .footer_confidentiality {
+        margin-bottom: 7px;
     }
 
     .footer-form__element input::placeholder {
@@ -2232,7 +2248,7 @@ a:hover {
     }
 
     .footer__btn .btn {
-        font-size: 16px;
+        font-size: 12px;
         line-height: 22px;
         padding: 26px 23px;
     }
@@ -2247,12 +2263,28 @@ a:hover {
         justify-content: space-between;
         align-items: center;
         padding-top: 25px;
+        padding-bottom: 10px;
     }
 
     .footer__second-copyright {
-        background: linear-gradient(180deg, #3C11A4 0%, rgba(61, 18, 165, 0) 100%),
-            linear-gradient(0deg, #0513D2, #0513D2);
+        background: #0513D2;
         display: block;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    .footer__second-copyright .footer-logo {
+        margin-bottom: 0;
+    }
+
+    .footer__second-copyright-tel {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .footer__second-copyright-tel__item {
+        display: inline-block;
     }
 
     .footer__second-copyright p {
@@ -2262,10 +2294,16 @@ a:hover {
         text-align: center;
         text-transform: uppercase;
         color: #FFFFFF;
+        padding-bottom: 15px;
+    }
+
+    .footer__second-copyright .footer-link:last-child {
+        display: inline;
+        text-align: center;
     }
 
     .footer__second-copyright .footer-link {
-        display: inline;
+        text-align: center;
     }
 
     .footer__second-copyright span {
@@ -2274,5 +2312,11 @@ a:hover {
         font-size: 12px;
         line-height: 32px;
         color: #fff;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 330px) {
+    .footer__second-copyright-tel__item {
+        display: none;
     }
 }

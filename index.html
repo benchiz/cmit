@@ -40,29 +40,30 @@
                         <div class="main_form__input">
                             <div class="main_form__name main_form-element">
                                 <label for="name"></label>
-                                <input class="main_form-input__item" type="text" id="name" name="userName"
+                                <input class="main_form-input__item _name" type="text" id="name" name="userName"
                                     placeholder="Ваше имя">
                             </div>
                             <div class="main_form__mail main_form-element">
                                 <label for="mail"></label>
-                                <input class="main_form-input__item" type="email" id="mail" name="userMail"
+                                <input class="main_form-input__item _mail" type="email" id="mail" name="userMail"
                                     placeholder="Ваш e-mail">
                             </div>
                             <div class="main_form__phone main_form-element">
                                 <label for="phone"></label>
-                                <input class="main_form-input__item" type="tel" id="phone" name="userTel"
+                                <input class="main_form-input__item _tel" type="tel" id="phone" name="userTel"
                                     placeholder="Ваш телефон">
                             </div>
                         </div>
                         <div class="main_form__confidentiality">
-                            <input class="visually-hidden" type="checkbox" id="conf" name="userConf" required>
+                            <input class="visually-hidden _agreement" type="checkbox" id="conf" name="userConf"
+                                _required>
                             <label for="conf">СОГЛАСЕН С&nbsp;<a href="javascript:void(0)">ПОЛИТИКОЙ
                                     КОНФИДЕНЦИАЛЬНОСТИ</a>&nbsp;И НА ПОЛУЧЕНИЕ РАССЫЛОК ОТ
                                 УНИВЕРСИТЕТА «СИНЕРГИЯ»</label>
                         </div>
                     </div>
                     <div class="main_form__btn">
-                        <button type="submit" class="btn">ЗАРЕГИСТРИРОВАТЬСЯ<span class="btn__text"> НА
+                        <button type="submit" class="btn active">ЗАРЕГИСТРИРОВАТЬСЯ<span class="btn__text"> НА
                                 КУРС</span></button>
                     </div>
                 </form>
@@ -298,15 +299,15 @@
                                     </div>
                                     <div class="main_form__confidentiality">
                                         <input class="visually-hidden" type="checkbox" id="conf-price" name="userConf"
-                                            required>
+                                            _required>
                                         <label for="conf-price">СОГЛАСЕН С&nbsp;<a href="javascript:void(0)">ПОЛИТИКОЙ
                                                 КОНФИДЕНЦИАЛЬНОСТИ</a>&nbsp;И НА ПОЛУЧЕНИЕ РАССЫЛОК ОТ
                                             УНИВЕРСИТЕТА «СИНЕРГИЯ»</label>
                                     </div>
                                 </div>
                                 <div class="main_form__btn">
-                                    <button type="submit" class="btn">ЗАРЕГИСТРИРОВАТЬСЯ<span class="btn__text"> НА
-                                            КУРС</span></button>
+                                    <button type="submit" class="btn active">ЗАРЕГИСТРИРОВАТЬСЯ<span class="btn__text">
+                                        НА КУРС</span></button>
                                 </div>
                             </form>
                         </div>
@@ -414,7 +415,7 @@
                                 </div>
                                 <div class="footer__wrapper-block_order">
                                     <div class="footer__btn">
-                                        <button type="submit" class="btn">
+                                        <button type="submit" class="btn active">
                                             ЗАРЕГИСТРИРОВАТЬСЯ
                                             НА&nbsp;КУРС
                                         </button>
@@ -443,9 +444,11 @@
                                     <img class="footer-logo" src="./img/logo.svg" alt="Логотип ЦМИТ Нейротех">
                                 </div>
                                 <div class="footer__second-copyright-tel">
-                                    <span>+7(495) 800 10 01</span>
-                                    <a href="tel:+74958001001" class="footer__second-copyright"><img src="img/phone.svg"
-                                            alt="Телефон"></a>
+                                    <div class="footer__second-copyright-tel__item">
+                                        <span>+7(495) 800 10 01</span>
+                                    </div>
+                                    <a href="tel:+74958001001" class="footer__second-copyright-link"><img
+                                            src="img/phone.svg" alt="Телефон"></a>
                                 </div>
                             </div>
                             <a class="footer-link" href="javascript:void(0)">Политика конфиденциальности</a>
@@ -458,6 +461,7 @@
             </div>
         </footer>
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
