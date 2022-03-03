@@ -35,27 +35,27 @@
     <main>
         <div class="main_form">
             <div class="container">
-                <form class="main_form__container js-form" action="sendmail.php" method="post">
+                <form class="main_form__container js-form" method="post">
                     <div class="main_form__wrapper">
                         <div class="main_form__input">
                             <div class="main_form__name main_form-element">
                                 <label for="name"></label>
-                                <input class="main_form-input__item _name" type="text" id="name" name="userName"
+                                <input class="main_form-input__item _name js-form-input" type="text" id="name" name="userName"
                                     placeholder="Ваше имя">
                             </div>
                             <div class="main_form__mail main_form-element">
                                 <label for="mail"></label>
-                                <input class="main_form-input__item _mail" type="email" id="mail" name="userMail"
+                                <input class="main_form-input__item _mail js-form-input" type="email" id="mail" name="userMail"
                                     placeholder="Ваш e-mail">
                             </div>
                             <div class="main_form__phone main_form-element">
                                 <label for="phone"></label>
-                                <input class="main_form-input__item _tel" type="tel" id="phone" name="userTel"
+                                <input class="main_form-input__item _tel js-form-input" type="tel" id="phone" name="userTel"
                                     placeholder="Ваш телефон">
                             </div>
                         </div>
                         <div class="main_form__confidentiality">
-                            <input class="visually-hidden _agreement" type="checkbox" id="conf" name="userConf"
+                            <input class="visually-hidden _agreement js-form-input" type="checkbox" id="conf" name="userConf"
                                 _required>
                             <label for="conf">СОГЛАСЕН С&nbsp;<a href="javascript:void(0)">ПОЛИТИКОЙ
                                     КОНФИДЕНЦИАЛЬНОСТИ</a>&nbsp;И НА ПОЛУЧЕНИЕ РАССЫЛОК ОТ
@@ -63,7 +63,7 @@
                         </div>
                     </div>
                     <div class="main_form__btn">
-                        <button type="button" class="btn active js-submit">ЗАРЕГИСТРИРОВАТЬСЯ<span class="btn__text"> НА
+                        <button type="button" class="btn js-submit">ЗАРЕГИСТРИРОВАТЬСЯ<span class="btn__text"> НА
                                 КУРС</span></button>
                     </div>
                 </form>
@@ -278,7 +278,7 @@
                     </div>
                     <div class="main_form">
                         <div class="container">
-                            <form class="main_form__container" action="https://echo.htmlacademy.ru" method="post">
+                            <form class="main_form__container" method="post">
                                 <div class="main_form__wrapper">
                                     <div class="main_form__input">
                                         <div class="main_form__name main_form-element">
@@ -306,7 +306,7 @@
                                     </div>
                                 </div>
                                 <div class="main_form__btn">
-                                    <button type="submit" class="btn active">ЗАРЕГИСТРИРОВАТЬСЯ<span class="btn__text">
+                                    <button type="submit" class="btn">ЗАРЕГИСТРИРОВАТЬСЯ<span class="btn__text">
                                         НА КУРС</span></button>
                                 </div>
                             </form>
@@ -393,7 +393,7 @@
                     <div class="footer__form">
                         <div class="container">
                             <span>Оставьте заявку</span>
-                            <form class="footer_form__container" action="https://echo.htmlacademy.ru">
+                            <form class="footer_form__container">
                                 <div class="footer-form__wrapper">
                                     <div class="footer-form__input">
                                         <div class="footer-form__name footer-form__element">
@@ -415,7 +415,7 @@
                                 </div>
                                 <div class="footer__wrapper-block_order">
                                     <div class="footer__btn">
-                                        <button type="submit" class="btn active">
+                                        <button type="submit" class="btn">
                                             ЗАРЕГИСТРИРОВАТЬСЯ
                                             НА&nbsp;КУРС
                                         </button>
@@ -460,6 +460,7 @@
                 </div>
             </div>
         </footer>
+        <!-- <div class="send-success"></div> -->
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script>

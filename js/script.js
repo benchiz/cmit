@@ -91,6 +91,11 @@ breakpointGradChecker();
 $('._tel').mask("+7(999) 999-9999");
 let btn = document.querySelector('.js-submit');
 let form = document.querySelector('.js-form');
+let formInputs = document.querySelectorAll('.js-form-input');
+window.userName = false;
+window.userMail = false;
+window.userTel = false;
+window.userAgreement = false;
 
 function validateEmail(mail) {
     const regEx = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
@@ -104,14 +109,12 @@ function validatePhone(phone) {
 
 function checkName() {
     let userName = document.querySelector('._name');
-    if (userName.value < 2) {
+    if (userName.value.length < 2) {
         userName.classList.add('fail');
-        userName.classList.remove('success');
-        return false;
+        window.userName = false;
     } else {
-        userName.classList.add('success');
         userName.classList.remove('fail');
-        return true;
+        window.userName = true;
     }
 }
 
@@ -119,28 +122,24 @@ function checkMail() {
     let mail = document.querySelector('._mail');
     let mailValue = mail.value;
     if (validateEmail(mailValue)) {
-        mail.classList.add('success');
         mail.classList.remove('fail');
-        return true;
+        window.userMail = true;
     } else {
         mail.classList.add('fail');
-        mail.classList.remove('success');
+        window.userMail = false;
     }
-    return false;
 }
 
 function checkPhone() {
     let phone = document.querySelector('._tel');
     let phoneValue = phone.value;
     if (validatePhone(phoneValue)) {
-        phone.classList.add('success');
         phone.classList.remove('fail');
-        return true;
+        window.userTel = true;
     } else {
         phone.classList.add('fail');
-        phone.classList.remove('success');
+        window.userTel = false;
     }
-    return false;
 }
 
 function checkAgreement() {
@@ -148,41 +147,34 @@ function checkAgreement() {
     let agreement = document.querySelector('._agreement');
     if (!agreement.checked) {
         agreementBlock.classList.add('fail');
-        return false;
+        window.userAgreement = false;
     } else {
         agreementBlock.classList.remove('fail');
-        return true;
+        window.userAgreement = true;
     }
 }
 
-function validateForm() {
-    btn.addEventListener('click', function (e) {
-        e.preventDefault();
+btn.addEventListener('click', function (e) {
+    e.preventDefault();
+    if (window.userName && window.userMail && window.userTel && window.userAgreement) {
+        let formData = new FormData(form);
+        let response = fetch('http://localhost/sendmail.php', {
+            method: 'POST',
+            body: formData
+        });
+        console.log(response);
+        if (response.ok) {
+            let result = response.json();
+            alert(result.message);
+            console.log('ok');
+        } else {
+            console.log('not ok');
+            alert('Ошибка ' + response.status);
+        }
+    } else {
         checkName();
         checkMail();
         checkPhone();
         checkAgreement();
-        if (checkName() && checkMail() && checkPhone() && checkAgreement()) {
-            let formData = new FormData(form);
-            console.log(formData);
-        // form.addEventListener('submit', function (e) {
-        //     e.preventDefault();
-        //     form.classList.add('sendComplete');
-        //     let response = fetch('sendmail.php', {
-        //         method: 'POST',
-        //         body: formData
-        //     });
-        //     if (response.ok) {
-        //         let result = response.json();
-        //         alert(result.message);
-        //         formPreview.innerHTML = '';
-        //         form.reset();
-        //     } else {
-        //         alert('Ошибка');
-        //     }
-        }
-        console.log('click');
-    });
-}
-
-validateForm();
+    }
+});

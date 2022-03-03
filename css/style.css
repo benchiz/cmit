@@ -303,12 +303,7 @@ a:hover {
     cursor: pointer;
     width: 100%;
     white-space: nowrap;
-    opacity: 0.5;
-    pointer-events: none;
-}
-
-.btn.active {
-    opacity: 1;
+    opacity:1 ;
     pointer-events: all;
 }
 
@@ -666,6 +661,7 @@ a:hover {
     padding-top: 165px;
     max-width: 480px;
     margin: 0 auto;
+    padding-bottom: 5px;
 }
 
 .price__first-block span {
@@ -978,10 +974,6 @@ a:hover {
 
 .footer__second-copyright {
     display: none;
-}
-
-.main_form-element .success {
-    border-color: green;
 }
 
 .main_form-element .fail {
