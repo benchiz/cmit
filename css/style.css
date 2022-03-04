@@ -303,7 +303,7 @@ a:hover {
     cursor: pointer;
     width: 100%;
     white-space: nowrap;
-    opacity:1 ;
+    opacity: 1;
     pointer-events: all;
 }
 
@@ -982,6 +982,12 @@ a:hover {
 
 .main_form__confidentiality.fail label::after {
     border-color: red;
+}
+
+.send-success {
+    min-width: 100%;
+    min-height: 100%;
+    position: relative;
 }
 
 @media (min-width: 0px) and (max-width: 1350px) {

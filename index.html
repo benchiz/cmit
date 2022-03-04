@@ -2,470 +2,482 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
-    <title>ЦМИТ Нейротех</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+	<title>ЦМИТ Нейротех</title>
 </head>
 
 <body>
-    <header class="header">
-        <div class="header__container relative">
-            <div class="header__main">
-                <img class="header__main-logo" src="img/logo.svg" alt="Логотип ЦМИТ Нейротех">
-                <a href="tel:+74958001001" class="header__main-phone"><img src="img/phone.svg" alt="Телефон"><span>+7
-                        (495) 800 10 01</span></a>
-            </div>
-            <div class="header__desc">Центр молодежного инновационного творчества «Нейротех»</div>
-            <div class="header__info">
-                <h1 class="header__info-title"><span class="header__title-pin">3D-</span>моделирование
-                    и&nbsp;прототипирование</h1>
-                <p class="header__info-text">Создай свою версию будущего!</p>
-            </div>
-            <div class="header__text">
-                <p class="header__text-item">Курс для начинающих 12+</p>
-                <p class="header__text-item">для взрослых и&nbsp;детей с&nbsp;12&nbsp;лет</p>
-            </div>
-            <div class="header__person"></div>
-        </div>
-    </header>
-    <main>
-        <div class="main_form">
-            <div class="container">
-                <form class="main_form__container js-form" method="post">
-                    <div class="main_form__wrapper">
-                        <div class="main_form__input">
-                            <div class="main_form__name main_form-element">
-                                <label for="name"></label>
-                                <input class="main_form-input__item _name js-form-input" type="text" id="name" name="userName"
-                                    placeholder="Ваше имя">
-                            </div>
-                            <div class="main_form__mail main_form-element">
-                                <label for="mail"></label>
-                                <input class="main_form-input__item _mail js-form-input" type="email" id="mail" name="userMail"
-                                    placeholder="Ваш e-mail">
-                            </div>
-                            <div class="main_form__phone main_form-element">
-                                <label for="phone"></label>
-                                <input class="main_form-input__item _tel js-form-input" type="tel" id="phone" name="userTel"
-                                    placeholder="Ваш телефон">
-                            </div>
-                        </div>
-                        <div class="main_form__confidentiality">
-                            <input class="visually-hidden _agreement js-form-input" type="checkbox" id="conf" name="userConf"
-                                _required>
-                            <label for="conf">СОГЛАСЕН С&nbsp;<a href="javascript:void(0)">ПОЛИТИКОЙ
-                                    КОНФИДЕНЦИАЛЬНОСТИ</a>&nbsp;И НА ПОЛУЧЕНИЕ РАССЫЛОК ОТ
-                                УНИВЕРСИТЕТА «СИНЕРГИЯ»</label>
-                        </div>
-                    </div>
-                    <div class="main_form__btn">
-                        <button type="button" class="btn js-submit">ЗАРЕГИСТРИРОВАТЬСЯ<span class="btn__text"> НА
-                                КУРС</span></button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <section class="prototype">
-            <div class="container">
-                <div class="prototype__block">
-                    <h2 class="prototype__block-title">Что такое прототип?</h2>
-                    <div class="prototype__block-text">
-                        <p class="prototype__block-text__item">Научная фантастика и&nbsp;кино о&nbsp;супергероях научили
-                            нас, что прототип&nbsp;&mdash; это начальная версия устройства, которую можно увидеть
-                            и&nbsp;потрогать. В&nbsp;современном цифровом мире есть и&nbsp;другой вид
-                            прототипа&nbsp;&mdash; код. И&nbsp;физический, и&nbsp;программный прототип можно
-                            протестировать и&nbsp;использовать
-                            на&nbsp;минимуме возможностей, который получит готовое изделие.</p>
-                    </div>
-                    <p class="prototype__subtext">Но&nbsp;самое главное, любой из&nbsp;них&nbsp;&mdash; твой шанс
-                        реализовать свое
-                        видение технологий будущего!</p>
-                </div>
-            </div>
-        </section>
-        <section class="course-info">
-            <div class="container">
-                <div class="course-info__block">
-                    <h2 class="course-info__title">На кого рассчитан курс</h2>
-                    <div class="course-info__wrapper">
-                        <div class="course-info__swiper swiper">
-                            <div class="course-info__swipper-wrapper swiper-wrapper">
-                                <div class="course-info__wrapper-block swiper-slide">
-                                    <img class="course-info__person course-info__first-person"
-                                        src="img/child_course.png" alt="Человек">
-                                    <p class="course-info__text">Школьники старше 12&nbsp;лет</p>
-                                </div>
-                                <div class="course-info__wrapper-block swiper-slide">
-                                    <img class="course-info__person" src="img/man_course.png" alt="Человек">
-                                    <p class="course-info__text">Взрослые, заинтересованные в&nbsp;смене специальности
-                                    </p>
-                                </div>
-                                <div class="course-info__wrapper-block swiper-slide">
-                                    <img class="course-info__person" src="img/girl_course.png" alt="Человек">
-                                    <p class="course-info__text">Взрослые, которые увлекаются современными технологиями
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="course-info__swiper-pagination swiper-pagination relative"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="program-course">
-            <div class="container">
-                <div class="program-course__wrapper">
-                    <h2 class="program-course__title">Программа курса</h2>
-                    <div class="program-course__swiper swiper">
-                        <div class="program-course__swiper-wrapper swiper-wrapper">
-                            <div class="program-course-item__wrapper swiper-slide">
-                                <div class="program-course__item">
-                                    <div class="program-course__item-program">
-                                        <h3 class="program-course__list-title">Основные понятия и&nbsp;программное
-                                            обеспечение 3D-моделирования</h3>
-                                        <ul class="program-course__list">
-                                            <li class="program-course__list-item">Основные понятия</li>
-                                            <li class="program-course__list-item">Знакомство с&nbsp;программным
-                                                обеспечением</li>
-                                        </ul>
-                                    </div>
-                                    <div class="program-course__item-text"><span>Практикум:</span> основы работы
-                                        в&nbsp;3D-пакетах.</div>
-                                </div>
-                            </div>
-                            <div class="program-course-item__wrapper swiper-slide">
-                                <div class="program-course__item">
-                                    <div class="program-course__item-program">
-                                        <h3 class="program-course__list-title">3D-печать</h3>
-                                        <ul class="program-course__list">
-                                            <li class="program-course__list-item">основные понятия, технологии
-                                                и&nbsp;разновидности</li>
-                                            <li class="program-course__list-item">сборка 3D-принтера и&nbsp;его
-                                                подготовка
-                                                к&nbsp;печати</li>
-                                            <li class="program-course__list-item">печать на&nbsp;принтере</li>
-                                        </ul>
-                                    </div>
-                                    <div class="program-course__item-text">
-                                        <span>Практикум:</span> печать моделей,
-                                        построенных
-                                        во&nbsp;втором блоке</div>
-                                </div>
-                            </div>
-                            <div class="program-course-item__wrapper swiper-slide">
-                                <div class="program-course__item">
-                                    <div class="program-course__item-program">
-                                        <h3 class="program-course__list-title">Технологии создания 3D-моделей</h3>
-                                        <ul class="program-course__list">
-                                            <li class="program-course__list-item">По&nbsp;планам и&nbsp;фотографиям</li>
-                                            <li class="program-course__list-item">С&nbsp;помощью лазерного сканирования
-                                            </li>
-                                            <li class="program-course__list-item">Работа с&nbsp;моделями рельефа
-                                                местности
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="program-course__item-text"><span>Практикум:</span> построение 3D-моделей
-                                        объектов
-                                        по&nbsp;разным внешним данным</div>
-                                </div>
-                            </div>
-                            <div class="program-course-item__wrapper swiper-slide">
-                                <div class="program-course__item">
-                                    <div class="program-course__item-program">
-                                        <h3 class="program-course__list-title">Проектная работа</h3>
-                                        <ul class="program-course__list">
-                                            <li class="program-course__list-item">проектная работа&nbsp;&mdash; выбор
-                                                направления исследования</li>
-                                            <li class="program-course__list-item">проведение выбора технологии
-                                                моделирования
-                                            </li>
-                                            <li class="program-course__list-item">изготовление 3D-модели</li>
-                                            <li class="program-course__list-item">подготовка и&nbsp;печать 3D-модели
-                                            </li>
-                                            <li class="program-course__list-item">написание презентации</li>
-                                            <li class="program-course__list-item">защита проекта</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="program-course__swiper-pagination swiper-pagination relative"></div>
-            </div>
-        </section>
-        <section class="learning">
-            <div class="container">
-                <h2 class="learning__title">На&nbsp;чем учим</h2>
-                <div class="learning__block">
-                    <div class="learning__block__item">ПО&nbsp;для автоматизированного проектирования
-                        &laquo;Компас&nbsp;3D&raquo;</div>
-                    <div class="learning__block__item">3D-сканеры Einscan PRO
-                        с&nbsp;4&nbsp;режимами сканирования и&nbsp;точностью до&nbsp;0,5&nbsp;мм</div>
-                    <div class="learning__block__item">Современный FFF или FDM 3D-принтер
-                        для каждого ученика</div>
-                    <div class="learning__block__item">ПО
-                        для автоматизации производства SolidWorks</div>
-                </div>
-            </div>
-        </section>
-        <section class="graduate">
-            <div class="container">
-                <div class="graduate__wrapper">
-                    <h3 class="graduate__title">Выпускники курса</h3>
-                    <div class="graduate__swiper swiper">
-                        <div class="graduate__swiper-wrapper swiper-wrapper">
-                            <div class="graduate-item__wrapper swiper-slide">
-                                <div class="graduate-item__text">Узнают о&nbsp;современных методах построения
-                                    3D-моделей.</div>
-                            </div>
-                            <div class="graduate-item__wrapper swiper-slide">
-                                <div class="graduate-item__text">Научатся создавать
-                                    и&nbsp;редактировать существующие 3D-модели</div>
-                            </div>
-                            <div class="graduate-item__wrapper swiper-slide">
-                                <div class="graduate-item__text">Разберутся,
-                                    как использовать 3D-сканер и&nbsp;принтер</div>
-                            </div>
-                            <div class="graduate-item__wrapper swiper-slide">
-                                <div class="graduate-item__text">Научатся печатать на&nbsp;3D-принтере по&nbsp;вводным
-                                    данным</div>
-                            </div>
-                            <div class="graduate-item__wrapper swiper-slide">
-                                <div class="graduate-item__text">Создадут свой первый проект по&nbsp;построению
-                                    3D-модели
-                                    с&nbsp;нуля</div>
-                            </div>
-                        </div>
-                        <div class="graduate__swiper-pagination swiper-pagination relative"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="learn-course">
-            <div class="learn-course__image"></div>
-            <div class="learn-course__learning-time">
-                <section class="learning-time">
-                    <div class="container">
-                        <div class="learning-time__block">
-                            <h3 class="learning-time__title">Когда можно учиться</h3>
-                            <div class="learning-time__text">
-                                Занятия проходят по&nbsp;вечерам
-                                или в&nbsp;выходные в&nbsp;группах до&nbsp;10&nbsp;человек
-                            </div>
-                        </div>
-                    </div>
-                </section>
+	<header class="header">
+		<div class="header__container relative">
+			<div class="header__main">
+				<img class="header__main-logo" src="img/logo.svg" alt="Логотип ЦМИТ Нейротех">
+				<a href="tel:+74958001001" class="header__main-phone"><img src="img/phone.svg" alt="Телефон"><span>+7
+						(495) 800 10 01</span></a>
+			</div>
+			<div class="header__desc">Центр молодежного инновационного творчества «Нейротех»</div>
+			<div class="header__info">
+				<h1 class="header__info-title"><span class="header__title-pin">3D-</span>моделирование
+					и&nbsp;прототипирование</h1>
+				<p class="header__info-text">Создай свою версию будущего!</p>
+			</div>
+			<div class="header__text">
+				<p class="header__text-item">Курс для начинающих 12+</p>
+				<p class="header__text-item">для взрослых и&nbsp;детей с&nbsp;12&nbsp;лет</p>
+			</div>
+			<div class="header__person"></div>
+		</div>
+	</header>
+	<main>
+		<div class="main_form">
+			<div class="container">
+				<form class="main_form__container js-form" method="POST">
+					<div class="main_form__wrapper">
+						<div class="main_form__input">
+							<div class="main_form__name main_form-element">
+								<label for="name"></label>
+								<input class="main_form-input__item _name js-form-input" type="text" id="name"
+									name="userName" placeholder="Ваше имя">
+							</div>
+							<div class="main_form__mail main_form-element">
+								<label for="mail"></label>
+								<input class="main_form-input__item _mail js-form-input" type="email" id="mail"
+									name="userMail" placeholder="Ваш e-mail">
+							</div>
+							<div class="main_form__phone main_form-element">
+								<label for="phone"></label>
+								<input class="main_form-input__item _tel js-form-input" type="tel" id="phone"
+									name="userTel" placeholder="Ваш телефон">
+							</div>
+						</div>
+						<div class="main_form__confidentiality">
+							<input class="visually-hidden _agreement js-form-input" type="checkbox" id="conf"
+								name="userConf">
+							<label for="conf">СОГЛАСЕН С&nbsp;<a href="javascript:void(0)">ПОЛИТИКОЙ
+									КОНФИДЕНЦИАЛЬНОСТИ</a>&nbsp;И НА ПОЛУЧЕНИЕ РАССЫЛОК ОТ
+								УНИВЕРСИТЕТА «СИНЕРГИЯ»</label>
+						</div>
+					</div>
+					<div class="main_form__btn">
+						<button type="submit" class="btn js-submit">ЗАРЕГИСТРИРОВАТЬСЯ<span class="btn__text"> НА
+								КУРС</span></button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<section class="prototype">
+			<div class="container">
+				<div class="prototype__block">
+					<h2 class="prototype__block-title">Что такое прототип?</h2>
+					<div class="prototype__block-text">
+						<p class="prototype__block-text__item">Научная фантастика и&nbsp;кино о&nbsp;супергероях научили
+							нас, что прототип&nbsp;&mdash; это начальная версия устройства, которую можно увидеть
+							и&nbsp;потрогать. В&nbsp;современном цифровом мире есть и&nbsp;другой вид
+							прототипа&nbsp;&mdash; код. И&nbsp;физический, и&nbsp;программный прототип можно
+							протестировать и&nbsp;использовать
+							на&nbsp;минимуме возможностей, который получит готовое изделие.</p>
+					</div>
+					<p class="prototype__subtext">Но&nbsp;самое главное, любой из&nbsp;них&nbsp;&mdash; твой шанс
+						реализовать свое
+						видение технологий будущего!</p>
+				</div>
+			</div>
+		</section>
+		<section class="course-info">
+			<div class="container">
+				<div class="course-info__block">
+					<h2 class="course-info__title">На кого рассчитан курс</h2>
+					<div class="course-info__wrapper">
+						<div class="course-info__swiper swiper">
+							<div class="course-info__swipper-wrapper swiper-wrapper">
+								<div class="course-info__wrapper-block swiper-slide">
+									<img class="course-info__person course-info__first-person"
+										src="img/child_course.png" alt="Человек">
+									<p class="course-info__text">Школьники старше 12&nbsp;лет</p>
+								</div>
+								<div class="course-info__wrapper-block swiper-slide">
+									<img class="course-info__person" src="img/man_course.png" alt="Человек">
+									<p class="course-info__text">Взрослые, заинтересованные в&nbsp;смене специальности
+									</p>
+								</div>
+								<div class="course-info__wrapper-block swiper-slide">
+									<img class="course-info__person" src="img/girl_course.png" alt="Человек">
+									<p class="course-info__text">Взрослые, которые увлекаются современными технологиями
+									</p>
+								</div>
+							</div>
+							<div class="course-info__swiper-pagination swiper-pagination relative"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="program-course">
+			<div class="container">
+				<div class="program-course__wrapper">
+					<h2 class="program-course__title">Программа курса</h2>
+					<div class="program-course__swiper swiper">
+						<div class="program-course__swiper-wrapper swiper-wrapper">
+							<div class="program-course-item__wrapper swiper-slide">
+								<div class="program-course__item">
+									<div class="program-course__item-program">
+										<h3 class="program-course__list-title">Основные понятия и&nbsp;программное
+											обеспечение 3D-моделирования</h3>
+										<ul class="program-course__list">
+											<li class="program-course__list-item">Основные понятия</li>
+											<li class="program-course__list-item">Знакомство с&nbsp;программным
+												обеспечением</li>
+										</ul>
+									</div>
+									<div class="program-course__item-text"><span>Практикум:</span> основы работы
+										в&nbsp;3D-пакетах.</div>
+								</div>
+							</div>
+							<div class="program-course-item__wrapper swiper-slide">
+								<div class="program-course__item">
+									<div class="program-course__item-program">
+										<h3 class="program-course__list-title">3D-печать</h3>
+										<ul class="program-course__list">
+											<li class="program-course__list-item">основные понятия, технологии
+												и&nbsp;разновидности</li>
+											<li class="program-course__list-item">сборка 3D-принтера и&nbsp;его
+												подготовка
+												к&nbsp;печати</li>
+											<li class="program-course__list-item">печать на&nbsp;принтере</li>
+										</ul>
+									</div>
+									<div class="program-course__item-text">
+										<span>Практикум:</span> печать моделей,
+										построенных
+										во&nbsp;втором блоке</div>
+								</div>
+							</div>
+							<div class="program-course-item__wrapper swiper-slide">
+								<div class="program-course__item">
+									<div class="program-course__item-program">
+										<h3 class="program-course__list-title">Технологии создания 3D-моделей</h3>
+										<ul class="program-course__list">
+											<li class="program-course__list-item">По&nbsp;планам и&nbsp;фотографиям</li>
+											<li class="program-course__list-item">С&nbsp;помощью лазерного сканирования
+											</li>
+											<li class="program-course__list-item">Работа с&nbsp;моделями рельефа
+												местности
+											</li>
+										</ul>
+									</div>
+									<div class="program-course__item-text"><span>Практикум:</span> построение 3D-моделей
+										объектов
+										по&nbsp;разным внешним данным</div>
+								</div>
+							</div>
+							<div class="program-course-item__wrapper swiper-slide">
+								<div class="program-course__item">
+									<div class="program-course__item-program">
+										<h3 class="program-course__list-title">Проектная работа</h3>
+										<ul class="program-course__list">
+											<li class="program-course__list-item">проектная работа&nbsp;&mdash; выбор
+												направления исследования</li>
+											<li class="program-course__list-item">проведение выбора технологии
+												моделирования
+											</li>
+											<li class="program-course__list-item">изготовление 3D-модели</li>
+											<li class="program-course__list-item">подготовка и&nbsp;печать 3D-модели
+											</li>
+											<li class="program-course__list-item">написание презентации</li>
+											<li class="program-course__list-item">защита проекта</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="program-course__swiper-pagination swiper-pagination relative"></div>
+			</div>
+		</section>
+		<section class="learning">
+			<div class="container">
+				<h2 class="learning__title">На&nbsp;чем учим</h2>
+				<div class="learning__block">
+					<div class="learning__block__item">ПО&nbsp;для автоматизированного проектирования
+						&laquo;Компас&nbsp;3D&raquo;</div>
+					<div class="learning__block__item">3D-сканеры Einscan PRO
+						с&nbsp;4&nbsp;режимами сканирования и&nbsp;точностью до&nbsp;0,5&nbsp;мм</div>
+					<div class="learning__block__item">Современный FFF или FDM 3D-принтер
+						для каждого ученика</div>
+					<div class="learning__block__item">ПО
+						для автоматизации производства SolidWorks</div>
+				</div>
+			</div>
+		</section>
+		<section class="graduate">
+			<div class="container">
+				<div class="graduate__wrapper">
+					<h3 class="graduate__title">Выпускники курса</h3>
+					<div class="graduate__swiper swiper">
+						<div class="graduate__swiper-wrapper swiper-wrapper">
+							<div class="graduate-item__wrapper swiper-slide">
+								<div class="graduate-item__text">Узнают о&nbsp;современных методах построения
+									3D-моделей.</div>
+							</div>
+							<div class="graduate-item__wrapper swiper-slide">
+								<div class="graduate-item__text">Научатся создавать
+									и&nbsp;редактировать существующие 3D-модели</div>
+							</div>
+							<div class="graduate-item__wrapper swiper-slide">
+								<div class="graduate-item__text">Разберутся,
+									как использовать 3D-сканер и&nbsp;принтер</div>
+							</div>
+							<div class="graduate-item__wrapper swiper-slide">
+								<div class="graduate-item__text">Научатся печатать на&nbsp;3D-принтере по&nbsp;вводным
+									данным</div>
+							</div>
+							<div class="graduate-item__wrapper swiper-slide">
+								<div class="graduate-item__text">Создадут свой первый проект по&nbsp;построению
+									3D-модели
+									с&nbsp;нуля</div>
+							</div>
+						</div>
+						<div class="graduate__swiper-pagination swiper-pagination relative"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="learn-course">
+			<div class="learn-course__image"></div>
+			<div class="learn-course__learning-time">
+				<section class="learning-time">
+					<div class="container">
+						<div class="learning-time__block">
+							<h3 class="learning-time__title">Когда можно учиться</h3>
+							<div class="learning-time__text">
+								Занятия проходят по&nbsp;вечерам
+								или в&nbsp;выходные в&nbsp;группах до&nbsp;10&nbsp;человек
+							</div>
+						</div>
+					</div>
+				</section>
 
-            </div>
-            <div class="learn-course__price">
-                <section class="price">
-                    <div class="container relative">
-                        <div class="price__first-block">Стоимость курса <span>8000 рублей</span></div>
-                        <div class="price__second-block">
-                            а&nbsp;это:
-                            4000 рублей&nbsp;&mdash; оплата в&nbsp;месяц
-                            Всего 16&nbsp;занятий за&nbsp;2&nbsp;месяца
-                            8&nbsp;занятий в&nbsp;месяц, 2&nbsp;в неделю
-                            каждое из&nbsp;которых 1&nbsp;астрономический час
-                        </div>
-                        <div class="price__person"></div>
-                    </div>
-                    <div class="main_form">
-                        <div class="container">
-                            <form class="main_form__container" method="post">
-                                <div class="main_form__wrapper">
-                                    <div class="main_form__input">
-                                        <div class="main_form__name main_form-element">
-                                            <label for="name-price"></label>
-                                            <input class="main_form-input__item" type="text" id="name-price"
-                                                name="userName" placeholder="Ваше имя">
-                                        </div>
-                                        <div class="main_form__mail main_form-element">
-                                            <label for="mail-price"></label>
-                                            <input class="main_form-input__item" type="email" id="mail-price"
-                                                name="userMail" placeholder="Ваш e-mail">
-                                        </div>
-                                        <div class="main_form__phone main_form-element">
-                                            <label for="phone-price"></label>
-                                            <input class="main_form-input__item _tel" type="tel" id="phone-price"
-                                                name="userTel" placeholder="Ваш телефон">
-                                        </div>
-                                    </div>
-                                    <div class="main_form__confidentiality">
-                                        <input class="visually-hidden" type="checkbox" id="conf-price" name="userConf"
-                                            _required>
-                                        <label for="conf-price">СОГЛАСЕН С&nbsp;<a href="javascript:void(0)">ПОЛИТИКОЙ
-                                                КОНФИДЕНЦИАЛЬНОСТИ</a>&nbsp;И НА ПОЛУЧЕНИЕ РАССЫЛОК ОТ
-                                            УНИВЕРСИТЕТА «СИНЕРГИЯ»</label>
-                                    </div>
-                                </div>
-                                <div class="main_form__btn">
-                                    <button type="submit" class="btn">ЗАРЕГИСТРИРОВАТЬСЯ<span class="btn__text">
-                                        НА КУРС</span></button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </section>
-        <section class="organization">
-            <div class="container">
-                <div class="organization__block-area">
-                    <h3 class="organization__title">О&nbsp;площадке</h3>
-                    <p class="organization__text">
-                        ЦМИТ &laquo;Нейротех&raquo;&nbsp;&mdash; это пространство для обучения
-                        и&nbsp;технического творчества школьников, студентов и&nbsp;молодых специалистов,
-                        где можно конструировать роботов и&nbsp;управлять ими жестами, создавать предметы
-                        на&nbsp;3D-принтерах и&nbsp;ЧПУ-установках
-                    </p>
-                </div>
-                <div class="organization__block-org">
-                    <h3 class="organization__title">Об&nbsp;организаторе</h3>
-                    <p class="organization__text">
-                        Университет &laquo;Синергия&raquo;&nbsp;&mdash; один из&nbsp;ведущих российских вузов, который
-                        осуществляет подготовку по&nbsp;более чем 200 программам высшего, второго высшего
-                        и&nbsp;дополнительного образования. На&nbsp;базе Университета действует старейшая в&nbsp;стране
-                        Школа бизнеса &laquo;Синергия&raquo;, основанная в&nbsp;1988 году и&nbsp;имеющая
-                        7&nbsp;престижных международных аккредитаций AMBA.
-                    </p>
-                </div>
-                <div class="organization-benefits__wrapper">
-                    <div class="organization-benefits__item">
-                        <img src="./img/30.png" alt="30">
-                        <p>Лет успешной работы</p>
-                    </div>
-                    <div class="organization-benefits__item">
-                        <img src="./img/200+.png" alt="200+">
-                        <p>Программ обучения</p>
-                    </div>
-                    <div class="organization-benefits__item">
-                        <img src="./img/21.png" alt="21">
-                        <p>Факультет</p>
-                    </div>
-                    <div class="organization-benefits__item">
-                        <img src="./img/95000.png" alt="95000">
-                        <p>Обучающихся по&nbsp;всем
-                            образовательным программам</p>
-                    </div>
-                    <div class="organization-benefits__item">
-                        <img src="./img/500.png" alt="500">
-                        <p>Преподавателей</p>
-                    </div>
-                    <div class="organization-benefits__item">
-                        <img src="./img/120.png" alt="120">
-                        <p>Отделений в&nbsp;России
-                            и&nbsp;других странах</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <footer class="footer">
-            <div class="container relative">
-                <div class="footer-course__wrapper">
-                    <div class="footer-course__wrapper-item">
-                        <div class="footer__desc">Центр молодежного
-                            инновационного творчества
-                            &laquo;Нейротех&raquo;
-                        </div>
-                        <div class="footer-course">
-                            <span>3D-</span>моделирование
-                            и&nbsp;прототипирование
-                        </div>
-                        <div class="footer-text">
-                            <p class="footer-text__item">Курс для начинающих 12+&nbsp;</p>
-                            <p class="footer-text__item">для взрослых и&nbsp;детей с&nbsp;12&nbsp;лет</p>
-                        </div>
-                        <div class="footer-copyright">
-                            <img class="footer-logo" src="./img/logo.svg" alt="Логотип ЦМИТ Нейротех">
-                            <a class="footer-link" href="javascript:void(0)">Политика конфиденциальности</a>
-                            <p>Разработка и&nbsp;продвижение &mdash;
-                                <a class="footer-link" href="javascript:void(0)">Synergy Digital</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="footer__form">
-                        <div class="container">
-                            <span>Оставьте заявку</span>
-                            <form class="footer_form__container">
-                                <div class="footer-form__wrapper">
-                                    <div class="footer-form__input">
-                                        <div class="footer-form__name footer-form__element">
-                                            <label for="name-footer"></label>
-                                            <input class="footer-form-input__item" type="text" id="name-footer"
-                                                name="userName" placeholder="Ваше имя">
-                                        </div>
-                                        <div class="footer-form__email footer-form__element">
-                                            <label for="mail-footer"></label>
-                                            <input class="footer-form-input__item" type="email" id="mail-footer"
-                                                name="userMail" placeholder="Ваш e-mail">
-                                        </div>
-                                        <div class="footer-form__tel footer-form__element">
-                                            <label for="phone-footer"></label>
-                                            <input class="footer-form-input__item _tel" type="tel" id="phone-footer"
-                                                name="userTel" placeholder="Ваш телефон">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="footer__wrapper-block_order">
-                                    <div class="footer__btn">
-                                        <button type="submit" class="btn">
-                                            ЗАРЕГИСТРИРОВАТЬСЯ
-                                            НА&nbsp;КУРС
-                                        </button>
-                                    </div>
-                                    <div class="footer_confidentiality">
-                                        <input class="visually-hidden" type="checkbox" name="userConf" id="footer-conf">
-                                        <label for="footer-conf">
-                                            СОГЛАСЕН С&nbsp;<a class="footer-link" href="javascript:void(0)">ПОЛИТИКОЙ
-                                                КОНФИДЕНЦИАЛЬНОСТИ</a>
-                                            И&nbsp;НА&nbsp;ПОЛУЧЕНИЕ РАССЫЛОК ОТ&nbsp;УНИВЕРСИТЕТА
-                                            &laquo;СИНЕРГИЯ&raquo;
-                                        </label>
-                                    </div>
-                                </div>
-                            </form>
-                            <div class="footer-tel__block">
-                                или по&nbsp;телефону:
-                                <a href="tel:+74958001001">+7 (495) 800 10&nbsp;01</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer__second-copyright">
-                        <div class="container">
-                            <div class="footer__second-copyright__wrapper">
-                                <div class="footer__second-copyright-logo">
-                                    <img class="footer-logo" src="./img/logo.svg" alt="Логотип ЦМИТ Нейротех">
-                                </div>
-                                <div class="footer__second-copyright-tel">
-                                    <div class="footer__second-copyright-tel__item">
-                                        <span>+7(495) 800 10 01</span>
-                                    </div>
-                                    <a href="tel:+74958001001" class="footer__second-copyright-link"><img
-                                            src="img/phone.svg" alt="Телефон"></a>
-                                </div>
-                            </div>
-                            <a class="footer-link" href="javascript:void(0)">Политика конфиденциальности</a>
-                            <p>Разработка и&nbsp;продвижение &mdash;
-                                <a class="footer-link" href="javascript:void(0)">Synergy Digital</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- <div class="send-success"></div> -->
-    </main>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="js/script.js"></script>
+			</div>
+			<div class="learn-course__price">
+				<section class="price">
+					<div class="container relative">
+						<div class="price__first-block">Стоимость курса <span>8000 рублей</span></div>
+						<div class="price__second-block">
+							а&nbsp;это:
+							4000 рублей&nbsp;&mdash; оплата в&nbsp;месяц
+							Всего 16&nbsp;занятий за&nbsp;2&nbsp;месяца
+							8&nbsp;занятий в&nbsp;месяц, 2&nbsp;в неделю
+							каждое из&nbsp;которых 1&nbsp;астрономический час
+						</div>
+						<div class="price__person"></div>
+					</div>
+					<div class="main_form">
+						<div class="container">
+							<form class="main_form__container" method="post">
+								<div class="main_form__wrapper">
+									<div class="main_form__input">
+										<div class="main_form__name main_form-element">
+											<label for="name-price"></label>
+											<input class="main_form-input__item" type="text" id="name-price"
+												name="userName" placeholder="Ваше имя">
+										</div>
+										<div class="main_form__mail main_form-element">
+											<label for="mail-price"></label>
+											<input class="main_form-input__item" type="email" id="mail-price"
+												name="userMail" placeholder="Ваш e-mail">
+										</div>
+										<div class="main_form__phone main_form-element">
+											<label for="phone-price"></label>
+											<input class="main_form-input__item _tel" type="tel" id="phone-price"
+												name="userTel" placeholder="Ваш телефон">
+										</div>
+									</div>
+									<div class="main_form__confidentiality">
+										<input class="visually-hidden" type="checkbox" id="conf-price" name="userConf">
+										<label for="conf-price">СОГЛАСЕН С&nbsp;<a href="javascript:void(0)">ПОЛИТИКОЙ
+												КОНФИДЕНЦИАЛЬНОСТИ</a>&nbsp;И НА ПОЛУЧЕНИЕ РАССЫЛОК ОТ
+											УНИВЕРСИТЕТА «СИНЕРГИЯ»</label>
+									</div>
+								</div>
+								<div class="main_form__btn">
+									<button type="submit" class="btn">ЗАРЕГИСТРИРОВАТЬСЯ<span class="btn__text">
+											НА КУРС</span></button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</section>
+			</div>
+		</section>
+		<section class="organization">
+			<div class="container">
+				<div class="organization__block-area">
+					<h3 class="organization__title">О&nbsp;площадке</h3>
+					<p class="organization__text">
+						ЦМИТ &laquo;Нейротех&raquo;&nbsp;&mdash; это пространство для обучения
+						и&nbsp;технического творчества школьников, студентов и&nbsp;молодых специалистов,
+						где можно конструировать роботов и&nbsp;управлять ими жестами, создавать предметы
+						на&nbsp;3D-принтерах и&nbsp;ЧПУ-установках
+					</p>
+				</div>
+				<div class="organization__block-org">
+					<h3 class="organization__title">Об&nbsp;организаторе</h3>
+					<p class="organization__text">
+						Университет &laquo;Синергия&raquo;&nbsp;&mdash; один из&nbsp;ведущих российских вузов, который
+						осуществляет подготовку по&nbsp;более чем 200 программам высшего, второго высшего
+						и&nbsp;дополнительного образования. На&nbsp;базе Университета действует старейшая в&nbsp;стране
+						Школа бизнеса &laquo;Синергия&raquo;, основанная в&nbsp;1988 году и&nbsp;имеющая
+						7&nbsp;престижных международных аккредитаций AMBA.
+					</p>
+				</div>
+				<div class="organization-benefits__wrapper">
+					<div class="organization-benefits__item">
+						<img src="./img/30.png" alt="30">
+						<p>Лет успешной работы</p>
+					</div>
+					<div class="organization-benefits__item">
+						<img src="./img/200+.png" alt="200+">
+						<p>Программ обучения</p>
+					</div>
+					<div class="organization-benefits__item">
+						<img src="./img/21.png" alt="21">
+						<p>Факультет</p>
+					</div>
+					<div class="organization-benefits__item">
+						<img src="./img/95000.png" alt="95000">
+						<p>Обучающихся по&nbsp;всем
+							образовательным программам</p>
+					</div>
+					<div class="organization-benefits__item">
+						<img src="./img/500.png" alt="500">
+						<p>Преподавателей</p>
+					</div>
+					<div class="organization-benefits__item">
+						<img src="./img/120.png" alt="120">
+						<p>Отделений в&nbsp;России
+							и&nbsp;других странах</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="footer">
+			<div class="container relative">
+				<div class="footer-course__wrapper">
+					<div class="footer-course__wrapper-item">
+						<div class="footer__desc">Центр молодежного
+							инновационного творчества
+							&laquo;Нейротех&raquo;
+						</div>
+						<div class="footer-course">
+							<span>3D-</span>моделирование
+							и&nbsp;прототипирование
+						</div>
+						<div class="footer-text">
+							<p class="footer-text__item">Курс для начинающих 12+&nbsp;</p>
+							<p class="footer-text__item">для взрослых и&nbsp;детей с&nbsp;12&nbsp;лет</p>
+						</div>
+						<div class="footer-copyright">
+							<img class="footer-logo" src="./img/logo.svg" alt="Логотип ЦМИТ Нейротех">
+							<a class="footer-link" href="javascript:void(0)">Политика конфиденциальности</a>
+							<p>Разработка и&nbsp;продвижение &mdash;
+								<a class="footer-link" href="javascript:void(0)">Synergy Digital</a>
+							</p>
+						</div>
+					</div>
+					<div class="footer__form">
+						<div class="container">
+							<span>Оставьте заявку</span>
+							<form class="footer_form__container">
+								<div class="footer-form__wrapper">
+									<div class="footer-form__input">
+										<div class="footer-form__name footer-form__element">
+											<label for="name-footer"></label>
+											<input class="footer-form-input__item" type="text" id="name-footer"
+												name="userName" placeholder="Ваше имя">
+										</div>
+										<div class="footer-form__email footer-form__element">
+											<label for="mail-footer"></label>
+											<input class="footer-form-input__item" type="email" id="mail-footer"
+												name="userMail" placeholder="Ваш e-mail">
+										</div>
+										<div class="footer-form__tel footer-form__element">
+											<label for="phone-footer"></label>
+											<input class="footer-form-input__item _tel" type="tel" id="phone-footer"
+												name="userTel" placeholder="Ваш телефон">
+										</div>
+									</div>
+								</div>
+								<div class="footer__wrapper-block_order">
+									<div class="footer__btn">
+										<button type="submit" class="btn">
+											ЗАРЕГИСТРИРОВАТЬСЯ
+											НА&nbsp;КУРС
+										</button>
+									</div>
+									<div class="footer_confidentiality">
+										<input class="visually-hidden" type="checkbox" name="userConf" id="footer-conf">
+										<label for="footer-conf">
+											СОГЛАСЕН С&nbsp;<a class="footer-link" href="javascript:void(0)">ПОЛИТИКОЙ
+												КОНФИДЕНЦИАЛЬНОСТИ</a>
+											И&nbsp;НА&nbsp;ПОЛУЧЕНИЕ РАССЫЛОК ОТ&nbsp;УНИВЕРСИТЕТА
+											&laquo;СИНЕРГИЯ&raquo;
+										</label>
+									</div>
+								</div>
+							</form>
+							<div class="footer-tel__block">
+								или по&nbsp;телефону:
+								<a href="tel:+74958001001">+7 (495) 800 10&nbsp;01</a>
+							</div>
+						</div>
+					</div>
+					<div class="footer__second-copyright">
+						<div class="container">
+							<div class="footer__second-copyright__wrapper">
+								<div class="footer__second-copyright-logo">
+									<img class="footer-logo" src="./img/logo.svg" alt="Логотип ЦМИТ Нейротех">
+								</div>
+								<div class="footer__second-copyright-tel">
+									<div class="footer__second-copyright-tel__item">
+										<span>+7(495) 800 10 01</span>
+									</div>
+									<a href="tel:+74958001001" class="footer__second-copyright-link"><img
+											src="img/phone.svg" alt="Телефон"></a>
+								</div>
+							</div>
+							<a class="footer-link" href="javascript:void(0)">Политика конфиденциальности</a>
+							<p>Разработка и&nbsp;продвижение &mdash;
+								<a class="footer-link" href="javascript:void(0)">Synergy Digital</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="send-success visually-hidden">
+			<div class="container relative">
+				<div class="send-success__block">
+					<img class="send-success__close" src="/img/cross.svg" alt="Закрыть">
+					<span class="send-success__item">Спасибо</span>
+					<div class="send-success__text">
+						Ваша заявка отправлена.
+						Менеджер свяжется с&nbsp;вами
+						в&nbsp;ближайшее время.
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"
+		type="text/javascript"></script>
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+	<script src="js/script.js"></script>
 </body>
 
 </html>

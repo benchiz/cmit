@@ -1,43 +1,32 @@
-<?php
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
+<?php 
+require_once('phpmailer/PHPMailerAutoload.php');
+$mail = new PHPMailer;
+$mail->CharSet = 'utf-8';
 
-$mail = new PHPMailer\PHPMailer\PHPMailer();
-
-$title = "Курс";
-
-try {
+$name = $_POST['userName'];
+$phone = $_POST['userTel'];
+$email = $_POST['userMail'];
 
 $mail->isSMTP();
-$mail->CharSet = "UTF-8";
-$mail->setFrom('info@tsmit.ru', 'ЦМИТ Нейротех');
+$mail->Host = 'smtp.yandex.ru';
+$mail->SMTPAuth = true;                       
+$mail->Username = 't3stmailpetrov@yandex.ru';
+$mail->Password = 'U75pUBdPc$.CT99';
+$mail->SMTPSecure = 'ssl';
+$mail->Port = 465;
+
+$mail->setFrom('t3stmailpetrov@yandex.ru');
 $mail->addAddress('trigubov.art@gmail.com');
 
-if(trim(!empty($_POST['userName']))){
-    $body.='<p><strong>Имя:</strong>  '.$_POST['userName'].'</p>';
-}
-
-if(trim(!empty($_POST['userMail']))){
-    $body.='<p><strong>E-mail:</strong>  '.$_POST['userMail'].'</p>';
-}
-
-if(trim(!empty($_POST['userTel']))){
-    $body.='<p><strong>Номер телефона:</strong>  '.$_POST['userTel'].'</p>';
-}
-
 $mail->isHTML(true);
-$mail->Subject = $title;
 
-if (!$mail->send()) {
-    $result = "Ошибка";
+$mail->Subject = 'Заявка с тестового сайта';
+$mail->Body    = '' .$name . ' оставил заявку, его телефон: ' .$phone. '<br>Почта этого пользователя: ' .$email;
+$mail->AltBody = '';
+
+if(!$mail->send()) {
+    echo = 'Error';
 } else {
-    $result = "Успех";
+	echo 'Success';
 }
-} catch (Exception $e) {
-    $result = "error";
-    echo "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
-}
-
-echo json_encode(["result" => $result]);
 ?>
